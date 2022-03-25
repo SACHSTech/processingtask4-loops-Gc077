@@ -57,10 +57,10 @@ public class Sketch extends PApplet {
     }
 
     // Quad 3
-    for(int intGradientCol = 0; intGradientCol <= 255; intGradientCol ++)
+    for(int intGradientCol = 0; intGradientCol <= 255; intGradientCol += 2)
     {
       stroke(intGradientCol);
-      line(intGradientCol, height / 2, intGradientCol, height / 2);
+      line(intGradientCol, height / 2, intGradientCol, height);
     }
     
     /*for(int intGradientX = 0; intGradientX == width / 2; intGradientX ++)
