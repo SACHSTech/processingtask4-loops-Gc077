@@ -65,6 +65,9 @@ public class Sketch extends PApplet {
     } 
 
     // Quad 4
+    fill(0, 105, 51); // Dark Camo Green
+    ellipse((float)(width / 1.333), (float)(height/ 1.333), (float)(width / 11.43), (float)(width / 11.43));
+    // Petals
     
   }
   
