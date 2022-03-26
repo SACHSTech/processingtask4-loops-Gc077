@@ -24,10 +24,10 @@ public class Sketch extends PApplet {
    */
   public void draw() {
 	  
-    // Dividing lines
+    // Quadrant Lines
     stroke(0);
-    fill(0);
-    line(width / 2, 0, width / 2, height);
+    fill(0); // Black
+    line(width / 2, 0, width / 2, height); 
     line(0, height / 2, width, height / 2);
 
     // Quad 1
@@ -57,18 +57,27 @@ public class Sketch extends PApplet {
     }
 
     // Quad 3
-    int intGradientCol;
-    for(intGradientCol = 0; intGradientCol <= width / 2; intGradientCol ++)
+    for(int intGradientCol = 0; intGradientCol <= (width / 2); intGradientCol ++)
     {
       stroke(intGradientCol);
-      line(intGradientCol, height / 2, intGradientCol, height);
+      line(intGradientCol, height / 2, intGradientCol, height); // Draw lines to screen
     } 
 
-    // Quad 4
-    fill(0, 105, 51); // Dark Camo Green
-    ellipse((float)(width / 1.333), (float)(height/ 1.333), (float)(width / 11.43), (float)(width / 11.43));
-    // Petals
-    
+    // Quad 4 
+    for(int intPetal = 0; intPetal < (float)(width / 1.1111111111); intPetal += (float)(width / 8.888888889)) 
+    {
+      stroke(0); 
+      fill(250, 140, 0); // Orange
+      pushMatrix();
+      translate((float)(width / 1.333), (float)(height / 1.333));
+      rotate(radians(intPetal));
+      ellipse(0, 0, height/20, height/3);
+      popMatrix();
+    }
+      // Middle circle
+      stroke(0, 105, 51); 
+      fill(0, 105, 51); // Dark Camo Green
+      ellipse((float)(width / 1.333), (float)(height / 1.333), width / 10, height / 10);
   }
   
 }
