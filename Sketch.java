@@ -57,14 +57,14 @@ public class Sketch extends PApplet {
     }
 
     // Quad 3
-    for(int intGradientCol = 0; intGradientCol <= (width / 2); intGradientCol ++)
+    for(int intGradientCol = 0; intGradientCol < (width / 2); intGradientCol ++)
     {
-      stroke(intGradientCol);
+      stroke((intGradientCol * 255) / (width / 2));
       line(intGradientCol, height / 2, intGradientCol, height); // Draw lines to screen
     } 
 
     // Quad 4 
-    for(int intPetal = 0; intPetal < (float)(width / 1.1111111111); intPetal += (float)(width / 8.888888889)) 
+    /*for(int intPetal = 0; intPetal < (float)(width / 1.1111111111); intPetal += (float)(width / 8.888888889)) 
     {
       stroke(0); 
       fill(250, 140, 0); // Orange
@@ -73,7 +73,16 @@ public class Sketch extends PApplet {
       rotate(radians(intPetal));
       ellipse(0, 0, height/20, height/3);
       popMatrix();
-    }
+    } */
+      fill(250, 140, 0); // Orange 
+      stroke(0);
+      translate((float)(width * 0.75), (float)(height * 0.75));
+      for(int intPetal = 0; intPetal < 8; intPetal ++)
+      {
+        rotate(PI / 4);
+        ellipse((float)(width / 10), 0, (float)(width / 5), (float)(height / 13.3));
+      }
+      
       // Middle circle
       stroke(0, 105, 51); 
       fill(0, 105, 51); // Dark Camo Green
