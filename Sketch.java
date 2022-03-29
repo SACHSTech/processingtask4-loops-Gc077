@@ -49,7 +49,7 @@ public class Sketch extends PApplet {
     int intCircleSize = width / 20; // Circle Size variable 
     for (int intCircleX = width / 2 + intCircleSize; intCircleX <= width - intCircleSize; intCircleX += width / 10)
     {
-      for (int intCircleY = intCircleSize; intCircleY <= (height/2)-intCircleSize; intCircleY += height / 10 ) 
+      for (int intCircleY = intCircleSize; intCircleY <= (height / 2)-intCircleSize; intCircleY += height / 10 ) 
       {
         fill(200, 100, 200); // Purple
           ellipse(intCircleX, intCircleY, intCircleSize, intCircleSize); // Draw Circles
@@ -64,19 +64,19 @@ public class Sketch extends PApplet {
     } 
 
     // Quad 4 
-      fill(250, 140, 0); // Orange 
+      fill(200, 90, 0); // Dark Orange 
       stroke(0);
       translate((float)(width * 0.75), (float)(height * 0.75));
       for(int intPetal = 0; intPetal < 8; intPetal ++)
       {
         rotate(PI / 4);
-        ellipse((float)(width / 10), 0, (float)(width / 5), (float)(height / 13.3));
+        ellipse((width / 10), 0,(width / 5), (float)(height / 17.6));
       }
       
       // Middle circle
       stroke(0, 105, 51); 
-      fill(0, 105, 51); // Dark Camo Green
-      ellipse(0, 0, width / 8, height / 8);
+      fill(0, 105, 51); // Camo Green
+      ellipse(0, 0, width / 9, height / 9);
     }
   
 }
